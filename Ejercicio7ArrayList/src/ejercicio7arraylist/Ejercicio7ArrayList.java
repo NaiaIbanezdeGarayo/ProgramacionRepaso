@@ -28,10 +28,16 @@ public class Ejercicio7ArrayList {
         }
         while (continuar==0);
         
-        menu = JOptionPane.showInputDialog("Introduce el número de la opción que deseas:\n"
+        String menu = JOptionPane.showInputDialog("Introduce el número de la opción que deseas:\n"
                                             + "1. Agregar un número.\n"
                                             + "2. Buscar un número.\n"
-                                            + "3. ");
+                                            + "3. Modificar un número.\n"
+                                            + "4. Eliminar un número.\n"
+                                            + "5. Insertar un número en una posición concreta.");
+        switch(menu){
+            case "1": 
+        
+        }
     }
     
 }
