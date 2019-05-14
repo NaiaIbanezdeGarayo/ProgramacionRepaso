@@ -5,17 +5,24 @@
  */
 package ejercicio8arraylist;
 
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Naia
  */
 public class Ejercicio8ArrayList {
 
-    /**
-     * @param args the command line arguments
-     */
+    static ArrayList<Integer>listaNumeros;
     public static void main(String[] args) {
-        // TODO code application logic here
+    
+        listaNumeros = new ArrayList<Integer>();
+        do {            
+            int numero = Integer.parseInt(JOptionPane.showInputDialog("Introduce el número que desees para crear el ArrayList"));
+            listaNumeros.add(numero);
+            int continuar = JOptionPane.showConfirmDialog(null,"¿Quieres continuar introduciendo números?");
+        } while (numero != 99);
     }
     
 }
