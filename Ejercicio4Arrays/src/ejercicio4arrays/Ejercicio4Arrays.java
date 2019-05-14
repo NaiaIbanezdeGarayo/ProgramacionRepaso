@@ -14,7 +14,7 @@ import javax.swing.JOptionPane;
 public class Ejercicio4Arrays {
 
     static double [] notasAlumnos = new double[10];
-    static String [] nombresAlumnos = new String[3];
+    static String [] nombresAlumnos = new String[4];
     static String [] notas = new String [4];
     
     public static void main(String[] args) {

@@ -22,11 +22,12 @@ public class Ejercicio10Validaciones {
         //String regex = "[A-Za-z]+@[a-z]+\\.[a-z]+";
         //String emailPattern = "^[_a-z0-9-]+(\\.[_a-z0-9-]+)*@[a-z0-9-]+(\\.[a-z0-9-+])*(\\.[a-z0-9-]+)*(\\.[a-z]{2,4})$";
         String cadena = JOptionPane.showInputDialog("Introduce tu email");
-        Pattern pat = Pattern.compile("[A-Za-z]+@[a-z]+\\\\.[a-z]+");
+        Pattern pat = Pattern.compile("^[_a-z0-9-]+(\\.[_a-z0-9-]+)*@[a-z]+(\\.[a-z])*(\\.[a-z]+)*(\\.[a-z]{2,4})$");
         Matcher mat = pat.matcher(cadena);
         if (mat.matches()) {
             JOptionPane.showMessageDialog(null, "El email es correcto");
-        }
+        }else
+            JOptionPane.showMessageDialog(null, "El email es incorrecto");
     }
     
 }

@@ -22,7 +22,7 @@ public class Ejercicios6ArrayList {
         ArrayList<String> caracteres = new ArrayList<String>();
         String cadena = " ";
         
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < caracteres.size(); i++) {
             
             String valor = JOptionPane.showInputDialog("Introduce un valor");
             caracteres.add(valor);
