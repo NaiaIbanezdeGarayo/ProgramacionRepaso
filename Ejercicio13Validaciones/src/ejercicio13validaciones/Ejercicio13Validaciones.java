@@ -30,32 +30,32 @@ public class Ejercicio13Validaciones {
             JOptionPane.showMessageDialog(null, "La calle es incorrecta");
         
         //Numero
-        String numero = JOptionPane.showInputDialog("Introduce la calle");
+        String numero = JOptionPane.showInputDialog("Introduce el número del portal");
         Pattern patt = Pattern.compile("^[0-9]{1,3}");
         Matcher matc = patt.matcher(numero);
         if (matc.matches()) {
-            JOptionPane.showMessageDialog(null, "La calle es correcta");
+            JOptionPane.showMessageDialog(null, "El número es correcto");
         }else
-            JOptionPane.showMessageDialog(null, "La calle es incorrecta");
+            JOptionPane.showMessageDialog(null, "El número es incorrecto");
         
         
         //Piso
-        String piso = JOptionPane.showInputDialog("Introduce la calle");
-        Pattern pa = Pattern.compile("^^[0-9]{1,2}");
+        String piso = JOptionPane.showInputDialog("Introduce el `psio");
+        Pattern pa = Pattern.compile("^[0-9]{1,2}");
         Matcher ma = pa.matcher(piso);
         if (ma.matches()) {
-            JOptionPane.showMessageDialog(null, "La calle es correcta");
+            JOptionPane.showMessageDialog(null, "El piso es correcto");
         }else
-            JOptionPane.showMessageDialog(null, "La calle es incorrecta");
+            JOptionPane.showMessageDialog(null, "El piso es incorrecto");
         
         //Letra
-        String letra = JOptionPane.showInputDialog("Introduce la calle");
-        Pattern p = Pattern.compile("^^[0-9]{1,2}");
+        String letra = JOptionPane.showInputDialog("Introduce la letra");
+        Pattern p = Pattern.compile("^[A-I]");
         Matcher m = p.matcher(letra);
         if (m.matches()) {
-            JOptionPane.showMessageDialog(null, "La calle es correcta");
+            JOptionPane.showMessageDialog(null, "La letra es correcta");
         }else
-            JOptionPane.showMessageDialog(null, "La calle es incorrecta");
+            JOptionPane.showMessageDialog(null, "La letra es incorrecta");
         
         
         
