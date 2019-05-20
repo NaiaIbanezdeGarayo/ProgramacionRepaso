@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ejercicio14clases;
+package ejercicio19entornografico;
 
 import java.util.ArrayList;
 import java.util.regex.Matcher;
@@ -14,11 +14,15 @@ import javax.swing.JOptionPane;
  *
  * @author Naia
  */
-public class Ejercicio14Clases {
+public class Ejercicio19EntornoGrafico {
 
     static ArrayList<Persona>personas;
     static int continuar;
+    
     public static void main(String[] args) {
+        
+    
+    
         
         personas = new ArrayList<Persona>();
         
@@ -83,25 +87,8 @@ public class Ejercicio14Clases {
         } while (continuar==0);
         
     
-        String menu = JOptionPane.showInputDialog("Introduce el número de la opción que quieres ejecutar:\n"
-                                                  + "1. Buscar persona por DNI.\n"
-                                                  + "2. Eliminar persona por DNI.\n"
-                                                  + "3. Ordenar por apellido.\n"
-                                                  + "4. Mostrar por lista todas las personas.\n"
-                                                  + "5. Salir.");
-        switch(menu){
-            case "1": buscarPersona();
-            break;
-            case "2": eliminarPersona();
-            break;
-            case "3": ordenarApellido();
-            break;
-            case "4": mostrarLista();
-            break;
-            case "5": salir();
-            break;
-            
-        }
+        
+        
         
     }
 
@@ -144,6 +131,7 @@ public class Ejercicio14Clases {
 
     private static void salir() {
         System.exit(0);
-    }
     
-}
+    }
+}   
+

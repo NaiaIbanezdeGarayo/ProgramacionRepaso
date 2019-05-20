@@ -3,14 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ejercicio14clases;
+package ejercicio19entornografico;
 
 /**
  *
  * @author Naia
  */
 class Persona {
-
     private String dni;
     private String apellido;
     private String nombre;
@@ -89,7 +88,5 @@ class Persona {
                 "Edad: " + edad + "\n" +
                 "Peso: " + peso + "\n" +
                 "------------------------------" + "\n";
-    }
-    
-    
+    }    
 }
