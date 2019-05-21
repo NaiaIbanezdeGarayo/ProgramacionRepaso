@@ -15,81 +15,33 @@ import javax.swing.JOptionPane;
  * @author Naia
  */
 public class Ejercicio19EntornoGrafico {
-
+    static Persona p;
     static ArrayList<Persona>personas;
     static int continuar;
+    public static Ventana v;
     
     public static void main(String[] args) {
-        
-    
-    
-        
         personas = new ArrayList<Persona>();
+        abrirVentana();
         
-        do {
-            Persona p = new Persona();
-            
-            //DNI
-            String dni = JOptionPane.showInputDialog("Introduce DNI");
-            Pattern pa = Pattern.compile("^[0-9]{8}[A-Z]");
-            Matcher ma = pa.matcher(dni);
-                if (ma.matches()) {
-                    JOptionPane.showMessageDialog(null, "DNI introducido");
-            
-                }
-            
-            p.setDni(dni);
-            
-            
-            //APELLIDO
-            String apellido = JOptionPane.showInputDialog("Introduce el apellido");
-            Pattern pattern = Pattern.compile("^[A-Z][a-z]{2,}");
-            Matcher m = pattern.matcher(apellido);
-                if (m.matches()) {
-                    JOptionPane.showMessageDialog(null, "Apellido introducido");
-            }
-            p.setApellido(apellido); 
-            
-            
-            //NOMBRE
-            String nombre = JOptionPane.showInputDialog("Introduce el nombre");
-            Pattern patt = Pattern.compile("^[A-Z][a-z]{2,}");
-            Matcher matt = patt.matcher(nombre);
-            if (matt.matches()) {
-                JOptionPane.showMessageDialog(null, "Nombre introducido");
-            }
-            p.setNombre(nombre);
-            
-            
-            //SEXO
-            String sexo = JOptionPane.showInputDialog("Introduce el sexo,\n"
-                                                        + "Al introducir el texto deberas poner H o M u O");
-            Pattern pat = Pattern.compile("H|M|O");
-            Matcher mat = pat.matcher(sexo);
-            if (mat.matches()) {
-                JOptionPane.showMessageDialog(null, "Sexo introducido");
-            }
-            p.setSexo(sexo);
-            
-            
-            //EDAD
-            int edad = Integer.parseInt(JOptionPane.showInputDialog("Intorduce la edad"));
-            p.setEdad(edad);
-            
-            
-            //PESO
-            int peso = Integer.parseInt(JOptionPane.showInputDialog("Introdue el peso"));
-            p.setPeso(peso);
-            
-            personas.add(p);
-            
-            continuar = JOptionPane.showConfirmDialog(null, "Quieres seguir introduciendo personas?");
-        } while (continuar==0);
+        abrirMenu();    
         
+        
+            
+             
+    }
     
+    static void rellenarDatos(String d, String n, String a, String s,int e, int pe) {
+        p = new Persona();
+        p.setDni(d);
+        p.setNombre(n);
+        p.setApellido(a);
+        p.setSexo(s);
+        p.setEdad(e);
+        p.setPeso(pe);
         
-        
-        
+        personas.add(p);
+        cerrarVentana();
     }
 
     private static void buscarPersona() {
@@ -133,5 +85,24 @@ public class Ejercicio19EntornoGrafico {
         System.exit(0);
     
     }
+
+    private static void abrirVentana() {
+        v = new Ventana();
+        v.setVisible(true);
+    }
+
+    static void rellenarDatos(String text, String text0, String text1, Object selectedItem, String text2, String text3) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    static void cerrarVentana() {
+        v.setVisible(false);
+    }
+
+    private static void abrirMenu() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    
 }   
 
